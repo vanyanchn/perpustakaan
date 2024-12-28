@@ -7,6 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class siswaModel extends Model
 {
     protected $table = 'siswa';
-    protected $guarded = ['id_fasilitas', 'created_at', 'updated_at'];
-    protected $primaryKey = 'id_detail_transaski';
+    protected $fillable = [
+        'nama_siswa',
+        'kelas',
+        'jenis_kelamin',
+        
+    ];
 }
