@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\registerController;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -8,9 +9,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/login', function () {
     return view('landing.login');
 });
-Route::get('/register', function () {
-    return view('landing.register');
-});
+Route::get('/register', [registerController::class,'panggil_register']);
 Route::get('/', function () {
     return view('home');
 });
